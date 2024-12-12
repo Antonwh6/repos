@@ -92,34 +92,4 @@ def mini_calculator(operation):
             result = calc.divide(one_number, two_number)
 
         output_label.config(text=f"Результат: {result}")
-    except ValueError:
-        output_label.config(text="Ошибка")
 
-
-
-root = tk.Tk()
-root.title("Файлы")
-root.geometry("500x500+400+200")
-name = ""
-
-
-
-button = tk.Button(root, text="Выбрать файл", command=vibor_file)
-button.pack(pady=30)
-
-entry = tk.Entry(root)
-entry.pack(pady=30)
-
-input_button = tk.Button(root, text="Вписать число", command=save_input_number)
-input_button.pack(pady=10)
-
-output_label = tk.Label(root, text="")
-output_label.pack(pady=10)
-
-
-
-root.withdraw()
-
-input_name_window()
-
-root.mainloop()
